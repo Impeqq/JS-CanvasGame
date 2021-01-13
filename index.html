@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Игра</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="black hidden">
+      <div class="how hidden">
+        <span class="close">&#10006;</span>
+        <p class="how__title">Как играть?</p>
+        <p>
+          Игрок может передвигаться с помощью клавиш-стрелок: налево и направо.
+          Для прыжка используется клавиша вверх, а для ухода под землю клавиша
+          вниз.
+        </p>
+        <p>
+          По мере прохождения игры на игрока нападают гиены, от которых можно
+          уворачиваться прыжком, или уходом под землю.
+        </p>
+        <p>
+          За каждую съеденную гусеницу дается 5 HP. Чтобы её достать, нужно
+          запрыгнуть на возвышенность.
+        </p>
+        <p>
+          При нажатии на кнопку ESC игра ставится на паузу, а при повторном
+          нажатии - снимается с паузы.
+        </p>
+        <p>
+          После завершения игры открывается экран результатов, в котором
+          формируется таблица с лучшими 10 игроками
+        </p>
+      </div>
+    </div>
+
+    <div class="hello hidden">
+      <div class="hello__title title">
+        <span>Тимон</span>
+        <span> и </span>
+        <span>Пумба</span>
+      </div>
+
+      <div class="hello__person-title">Выбор персонажа:</div>
+
+      <div class="hello__person">
+        <label class="person">
+          <input type="radio" name="person" checked />
+          <img src="img/img1.png" alt="пумба" />
+        </label>
+        <label class="person">
+          <input type="radio" name="person" />
+          <img src="img/img2.png" alt="тимон" />
+        </label>
+      </div>
+
+      <input type="text" placeholder="Ваше имя" class="hello__input input" />
+
+      <div class="hello__how button">Как играть?</div>
+
+      <button disabled class="hello__button button">Играть</button>
+    </div>
+
+    <div class="game">
+      <div class="game__title">
+        <span>Тимон</span>
+        <span> и </span>
+        <span>Пумба</span>
+      </div>
+      <div class="game__block">
+        <div class="game__screen">
+          <div class="game__pause hidden">Пауза<span>Чтобы продолжить игру, нажмите ESC</span></div>
+          <div class="game__info">
+            <span>Здоровье: <span class="health">1</span></span>
+            <span>Гусеницы: <span class="gus">1</span></span>
+            <span>Время: <span class="time"><span class="mm">00</span>:<span class="ss">00</span></span>
+          </div>
+          <div class="game__background"></div>
+          <canvas id="canvas" width="10000" height="500"> </canvas>
+          <div class="game__finish hidden">
+            <div class="game__finish-title">Игра окончена</div>
+            <div class="game__finish-table">
+              <div class="game__finish-table-tr">
+                <div class="game__finish-table-td">Имя</div>
+                <div class="game__finish-table-td">Счёт</div>
+              </div>
+              <div class="game__finish-table-tr">
+                <div class="game__finish-table-td">Здесь</div>
+                <div class="game__finish-table-td">100</div>
+              </div>
+              <div class="game__finish-table-tr">
+                <div class="game__finish-table-td">Могли</div>
+                <div class="game__finish-table-td">100</div>
+              </div>
+              <div class="game__finish-table-tr">
+                <div class="game__finish-table-td">Бы</div>
+                <div class="game__finish-table-td">100</div>
+              </div>
+              <div class="game__finish-table-tr">
+                <div class="game__finish-table-td">Быть</div>
+                <div class="game__finish-table-td">100</div>
+              </div>
+              <div class="game__finish-table-tr">
+                <div class="game__finish-table-td">Вы</div>
+                <div class="game__finish-table-td">100</div>
+              </div>
+              <div class="game__finish-table-tr">
+                <div class="game__finish-table-td">Если</div>
+                <div class="game__finish-table-td">100</div>
+              </div>
+              <div class="game__finish-table-tr">
+                <div class="game__finish-table-td">Бы</div>
+                <div class="game__finish-table-td">100</div>
+              </div>
+              <div class="game__finish-table-tr">
+                <div class="game__finish-table-td">Работала</div>
+                <div class="game__finish-table-td">100</div>
+              </div>
+              <div class="game__finish-table-tr">
+                <div class="game__finish-table-td">База</div>
+                <div class="game__finish-table-td">100</div>
+              </div>
+              <div class="game__finish-table-tr">
+                <div class="game__finish-table-td">Данных</div>
+                <div class="game__finish-table-td">100</div>
+              </div>
+            </div>
+            <button class="finish__button button">Попробовать ещё?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jq.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
